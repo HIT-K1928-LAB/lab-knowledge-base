@@ -5,7 +5,7 @@
 ## 1. 指标总览
 | 指标 | 公式 | 含义 | 趋势 |
 | --- | --- | --- | --- |
-| IoU | $\frac{|B_p \cap B_g|}{|B_p \cup B_g|}$ | 预测框和真实框的重叠程度 | 越高越好 |
+| IoU | $\frac{\lvert B_p \cap B_g \rvert}{\lvert B_p \cup B_g \rvert}$ | 预测框和真实框的重叠程度 | 越高越好 |
 | Precision | $\frac{TP}{TP+FP}$ | 预测出的目标中有多少是真的 | 越高越好 |
 | Recall | $\frac{TP}{TP+FN}$ | 真实目标中有多少被检测到 | 越高越好 |
 | AP | $\int_0^1 p(r)dr$ | 单类别 PR 曲线下的面积 | 越高越好 |
