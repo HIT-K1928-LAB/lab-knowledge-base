@@ -62,11 +62,19 @@
 | [SegFormer](https://github.com/NVlabs/SegFormer) | Transformer 分割 | 阅读官方 SegFormer 配置和训练代码 |
 | [Mask2Former](https://github.com/facebookresearch/Mask2Former) | 通用分割 | 学习统一分割框架 |
 
-## 8. 推荐学习顺序
+## 8. 数据集获取
+| 数据集 | 链接 | 适用场景 | 备注 |
+| --- | --- | --- | --- |
+| PASCAL VOC 2012 | [download](https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2012/) | 分割入门 | 常与增强标注版本一起使用 |
+| Cityscapes | [download](https://www.cityscapes-dataset.com/downloads/) | 自动驾驶场景分割 | 需要注册账号 |
+| ADE20K | [download](https://ade20k.csail.mit.edu/) | 室内外场景解析 | 类别丰富，适合语义分割研究 |
+| COCO-Stuff | [download](https://github.com/nightrome/cocostuff) | stuff + thing 分割 | 适合场景级语义理解 |
+| Mapillary Vistas | [download](https://www.mapillary.com/dataset/vistas) | 街景语义分割 | 高分辨率街景数据 |
+
+## 9. 推荐学习顺序
 `mIoU / pixel accuracy → FCN → U-Net → PSPNet → DeepLabv3+ → Fast-SCNN → SegFormer → Mask2Former`
 
-## 9. 常见问题
+## 10. 常见问题
 - 分割训练中 crop size、batch size、类别权重、ignore label 经常比模型结构更影响结果。
 - 分割结果要同时看整体 mIoU 和小类别 IoU，平均指标可能掩盖长尾类别问题。
 - 边界质量通常需要结合可视化检查，不能只看表格指标。
-

@@ -42,14 +42,24 @@
 | VPR | FAB-MAP、NetVLAD、GeM、DELG、CosPlace、AnyLoc | 理解地点检索与视觉定位入口 |
 | 线框解析 | LSD、L-CNN、HAWP、LETR、F-Clip、DeepLSD | 理解线段与结构化几何解析 |
 
-## 4. 课程讲义使用方式
-- 每个子目录都按“学习目标 → 发展脉络 → 方法地图 → 入门路线 → 进阶路线 → 论文精读 → 代码实践”组织。
+## 4. 数据集获取总览
+| 方向 | 入门数据集 | 进阶数据集 | 详情 |
+| --- | --- | --- | --- |
+| 图像分类 | [CIFAR-10/100](https://www.cs.toronto.edu/~kriz/cifar.html)、[MNIST](http://yann.lecun.com/exdb/mnist/) | [ImageNet](https://image-net.org/download.php)、[Places365](http://places2.csail.mit.edu/download.html) | [图像分类/readme.md](图像分类/readme.md) |
+| 目标检测 | [PASCAL VOC](https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/)、[COCO](https://cocodataset.org/#download) | [Open Images](https://storage.googleapis.com/openimages/web/download.html)、[LVIS](https://www.lvisdataset.org/dataset)、[Objects365](https://www.objects365.org/overview.html) | [目标检测/readme.md](目标检测/readme.md) |
+| 语义分割 | [PASCAL VOC 2012](https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/voc2012/)、[Cityscapes](https://www.cityscapes-dataset.com/downloads/) | [ADE20K](https://ade20k.csail.mit.edu/)、[COCO-Stuff](https://github.com/nightrome/cocostuff)、[Mapillary Vistas](https://www.mapillary.com/dataset/vistas) | [语义分割/readme.md](语义分割/readme.md) |
+| 图像增强 | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/)、[SIDD](https://abdokamel.github.io/sidd/) | [GoPro](https://seungjunnah.github.io/Datasets/gopro.html)、[LOL](https://daooshee.github.io/BMVC2018website/)、[RESIDE](https://sites.google.com/view/reside-dehaze-datasets/reside-standard) | [图像增强/readme.md](图像增强/readme.md) |
+| VPR | [Pittsburgh](https://www.di.ens.fr/willow/research/netvlad/)、[Tokyo 24/7](https://www.di.ens.fr/willow/research/netvlad/) | [MSLS](https://www.mapillary.com/dataset/places)、[Oxford RobotCar](https://robotcar-dataset.robots.ox.ac.uk/)、[Nordland](https://nrkbeta.no/2013/01/15/nordlandsbanen-minute-by-minute-season-by-season/) | [VPR/readme.md](VPR/readme.md) |
+| 线框解析 | [Wireframe Dataset](https://github.com/zhou13/lcnn)、[York Urban](https://www.elderlab.yorku.ca/resources/york-urban-line-segment-database-information/) | [HAWP Dataset](https://github.com/cherubicXN/hawp)、[Hugging Face Wireframe](https://huggingface.co/datasets/lh9171338/Wireframe) | [线框解析/readme.md](线框解析/readme.md) |
+
+## 5. 课程讲义使用方式
+- 每个子目录都按“学习目标 → 发展脉络 → 方法地图 → 入门路线 → 进阶路线 → 论文精读 → 代码实践 → 数据集获取”组织。
 - 入门阶段优先理解任务定义、经典模型和评价指标，不必一次读完所有细节。
 - 进阶阶段重点比较方法之间的动机差异、结构差异和适用场景。
 - 论文精读建议遵循“问题背景 → 方法结构 → 损失函数 → 实验设置 → 局限性”的顺序。
 - 代码实践建议先跑官方 demo，再改数据集和配置，最后再尝试复现实验指标。
 
-## 5. 推荐周计划
+## 6. 推荐周计划
 | 周次 | 学习内容 | 产出 |
 | --- | --- | --- |
 | 第 1 周 | 图像分类基础：AlexNet、VGG、ResNet | 读论文笔记 + 跑通分类 demo |
@@ -59,7 +69,7 @@
 | 第 5 周 | VPR 基础：NetVLAD、CosPlace、MixVPR | 构建小型地点检索 demo |
 | 第 6 周 | 线框解析基础：LSD、HAWP、DeepLSD | 做线段检测可视化与误差分析 |
 
-## 6. 论文精读模板
+## 7. 论文精读模板
 建议每篇论文都按以下问题整理笔记：
 
 1. 这篇论文解决了什么问题？之前方法的主要缺陷是什么？
@@ -70,7 +80,7 @@
 6. 这篇论文适合复现吗？有哪些代码仓库可以参考？
 7. 它对当前课题有什么启发？可以迁移到哪里？
 
-## 7. 代码复现模板
+## 8. 代码复现模板
 建议每个代码仓库都按以下顺序上手：
 
 1. 阅读 `README`，确认环境、数据集、预训练权重和许可证。
@@ -80,9 +90,8 @@
 5. 固定随机种子，记录配置文件、commit id 和实验结果。
 6. 做 1—2 个小 ablation，确认关键模块是否真的有效。
 
-## 8. 维护建议
+## 9. 维护建议
 - 新增论文时优先加入对应子目录的“论文精读”表格，而不是只堆链接。
 - 新增代码仓库时说明它覆盖的任务、推荐用途和是否为官方实现。
 - 每个方向都建议保留“入门”和“进阶”两条路线，方便不同基础的同学使用。
 - 如果实验室课题发生变化，可以在对应目录继续增加“专题阅读”小节。
-

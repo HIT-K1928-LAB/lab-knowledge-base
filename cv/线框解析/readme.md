@@ -61,11 +61,18 @@
 | [DeepLSD](https://github.com/cvg/DeepLSD) | 线段检测与 refinement | 学习现代线段检测强基线 |
 | [TP-LSD](https://github.com/Siyuada7/TP-LSD) | 线段检测 | 补充参考实现 |
 
-## 8. 推荐学习顺序
+## 8. 数据集获取
+| 数据集 | 链接 | 适用场景 | 备注 |
+| --- | --- | --- | --- |
+| Wireframe Dataset | [download](https://github.com/zhou13/lcnn) | 线框解析 | L-CNN 仓库提供数据准备说明 |
+| HAWP Dataset | [download](https://github.com/cherubicXN/hawp) | 线框解析训练与评估 | HAWP 仓库提供数据链接和格式说明 |
+| York Urban Line Segment Database | [download](https://www.elderlab.yorku.ca/resources/york-urban-line-segment-database-information/) | 城市场景线段检测 | 传统线段检测常用数据集 |
+| Wireframe on Hugging Face | [download](https://huggingface.co/datasets/lh9171338/Wireframe) | 快速获取 wireframe 数据 | 适合快速下载和实验 |
+
+## 9. 推荐学习顺序
 `边缘检测 → Hough Transform → LSD → L-CNN → HAWP → LETR → F-Clip → DeepLSD → 线段辅助定位 / 重建`
 
-## 9. 常见问题
+## 10. 常见问题
 - 线段检测结果的视觉质量很重要，数值指标可能无法完全反映结构连续性。
 - 室内、建筑和自然场景的线段分布差异很大，跨域泛化需要单独评估。
 - 如果用于定位或重建，还需要关注线段匹配和几何一致性，而不只是检测本身。
-

@@ -76,11 +76,20 @@
 | [Retinexformer](https://github.com/caiyuanhao1998/Retinexformer) | 低照度增强 | 学习近年的低照度强基线 |
 | [NAFNet](https://github.com/megvii-research/NAFNet) | 通用复原 | 学习简洁高效复原网络 |
 
-## 8. 推荐学习顺序
+## 8. 数据集获取
+| 数据集 | 链接 | 适用场景 | 备注 |
+| --- | --- | --- | --- |
+| DIV2K | [download](https://data.vision.ee.ethz.ch/cvl/DIV2K/) | 单图像超分辨率 | SR 方向最常用数据集之一 |
+| Flickr2K | [download](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) | 超分训练补充数据 | 常与 DIV2K 合并为 DF2K |
+| SIDD | [download](https://abdokamel.github.io/sidd/) | 真实图像去噪 | 手机真实噪声数据集 |
+| GoPro | [download](https://seungjunnah.github.io/Datasets/gopro.html) | 动态场景去模糊 | 去模糊经典 benchmark |
+| LOL | [download](https://daooshee.github.io/BMVC2018website/) | 低照度增强 | RetinexNet 论文常用数据集 |
+| RESIDE | [download](https://sites.google.com/view/reside-dehaze-datasets/reside-standard) | 单图像去雾 | 去雾方向常用 benchmark |
+
+## 9. 推荐学习顺序
 `PSNR / SSIM / LPIPS → SRCNN → DnCNN → EDSR → ESRGAN → RetinexNet → Zero-DCE → SwinIR → Restormer → NAFNet`
 
-## 9. 常见问题
+## 10. 常见问题
 - 图像增强不能只看数值指标，一定要结合视觉结果和下游任务表现。
 - 真实退化通常比合成退化复杂，训练数据的退化模型非常关键。
 - 感知质量强的方法可能生成不存在的细节，科研和工程中需要明确风险。
-

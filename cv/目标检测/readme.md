@@ -64,11 +64,19 @@
 | [Deformable-DETR](https://github.com/fundamentalvision/Deformable-DETR) | Deformable DETR | 理解可变形注意力检测器 |
 | [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO) | 开放词表检测 | 进一步学习文本引导检测 |
 
-## 8. 推荐学习顺序
+## 8. 数据集获取
+| 数据集 | 链接 | 适用场景 | 备注 |
+| --- | --- | --- | --- |
+| PASCAL VOC 2007 / 2012 | [download](https://www.robots.ox.ac.uk/~vgg/projects/pascal/VOC/) | 检测入门、小规模复现 | 经典检测 benchmark |
+| MS COCO | [download](https://cocodataset.org/#download) | 通用目标检测 | 当前最常用的检测数据集之一 |
+| Open Images | [download](https://storage.googleapis.com/openimages/web/download.html) | 大规模开放类别检测 | 类别和标注类型丰富 |
+| LVIS | [download](https://www.lvisdataset.org/dataset) | 长尾目标检测 | 适合研究 long-tail detection |
+| Objects365 | [download](https://www.objects365.org/overview.html) | 大规模检测预训练 | 常用于检测预训练和迁移 |
+
+## 9. 推荐学习顺序
 `IoU / NMS / mAP → R-CNN → Fast R-CNN → Faster R-CNN → FPN → YOLO / SSD → RetinaNet → FCOS → DETR → Deformable DETR`
 
-## 9. 常见问题
+## 10. 常见问题
 - 检测模型效果差时，不要只看 backbone，也要检查标注格式、类别分布、输入尺度、anchor/assigner 和 NMS 阈值。
 - 小目标检测通常更依赖输入分辨率、多尺度特征和数据增强。
 - DETR 类模型理论上端到端，但训练配置和数据规模仍然非常关键。
-

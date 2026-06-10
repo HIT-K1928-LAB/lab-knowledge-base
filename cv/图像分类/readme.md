@@ -61,11 +61,18 @@
 | [ConvNeXt](https://github.com/facebookresearch/ConvNeXt) | ConvNeXt | 理解现代 CNN 训练配置 |
 | [MAE](https://github.com/facebookresearch/mae) | 自监督预训练 | 从分类扩展到表征学习 |
 
-## 8. 推荐学习顺序
+## 8. 数据集获取
+| 数据集 | 链接 | 适用场景 | 备注 |
+| --- | --- | --- | --- |
+| MNIST | [download](http://yann.lecun.com/exdb/mnist/) | 手写数字分类入门 | 适合验证训练流程 |
+| CIFAR-10 / CIFAR-100 | [download](https://www.cs.toronto.edu/~kriz/cifar.html) | 小规模自然图像分类 | 适合课堂实验和快速 baseline |
+| ImageNet | [download](https://image-net.org/download.php) | 大规模通用图像分类 | 需要注册并遵守数据许可 |
+| Places365 | [download](http://places2.csail.mit.edu/download.html) | 场景分类 | 适合理解场景识别和分类迁移 |
+
+## 9. 推荐学习顺序
 `LeNet → AlexNet → VGG → GoogLeNet → ResNet → EfficientNet → ViT → ConvNeXt → MAE / CLIP`
 
-## 9. 常见问题
+## 10. 常见问题
 - 分类论文不只要看模型结构，也要看训练策略、数据增强、正则化和评估协议。
 - 论文里的参数量、FLOPs 和真实推理速度不是同一个概念，做工程实验时需要分别统计。
 - 下游任务常用分类 backbone，因此理解分类网络能直接帮助学习检测、分割和检索。
-
